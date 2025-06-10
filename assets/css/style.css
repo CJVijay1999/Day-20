@@ -5,12 +5,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+h1 {
+  margin: 10px;
+}
+
 .calendar {
   padding: 10px;
-  margin: 10px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin: 20px;
 }
 
 .calendar-date {
@@ -20,7 +21,7 @@
 
 .date-time {
   padding: 10px;
-  margin: 10px;
+  margin: 10px; 
 }
 
 .date-time #digital-clock {
@@ -32,4 +33,9 @@
 
 #date {
   margin-top: 1rem;
+}
+
+.month-year {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+    0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
 }

@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1 class="text-4xl text-center font-bold bg-amber-400">Calendar</h1>
-    <div class="date-time max-w-[500px]">
+  <body class="bg-linear-to-r from-cyan-500 to-blue-500">
+    <h1 class="text-4xl text-center bg-sky-600 text-white font-bold rounded-xl">
+      Calendar
+    </h1>
+    <!-- <div class="date-time max-w-[500px]">
       <div
         id="digital-clock"
         class="text-6xl text-center text-black font-bold bg-amber-400 rounded-xl"
@@ -17,14 +19,38 @@
         <div id="date" class="text-2xl"></div>
         <div id="time"></div>
       </div>
-    </div>
-    <div
-      class="calendar grid grid-cols-3 gap-4 border border-gray-400 rounded-xl"
-    >
-      <div class="calendar-wrapper max-w-[400px]">
-        <h2 class="text-2xl text-center font-bold">June 2025</h2>
-        <ol class="calendar grid grid-cols-7 bg-gray-200">
-          <li class="day-name">Sum</li>
+    </div> -->
+    <div class="calendar flex justify-center items-center">
+      <div
+        class="calendar-wrapper max-w-[400px] border-none rounded-xl shadow-xl/30"
+      >
+        <div class="month-year text-2xl text-center font-bold">
+          <select name="month" id="">
+            <option value="january">January</option>
+            <option value="february">February</option>
+            <option value="march">March</option>
+            <option value="april">April</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="august">August</option>
+            <option value="september">September</option>
+            <option value="october">October</option>
+            <option value="november">November</option>
+            <option value="december">December</option>
+          </select>
+          <select name="year">
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+          </select>
+        </div>
+        <ol class="calendar grid grid-cols-7 bg-sky-600 underline">
+          <li class="day-name">Sun</li>
           <li class="day-name">Mon</li>
           <li class="day-name">Tus</li>
           <li class="day-name">Wed</li>
@@ -32,8 +58,8 @@
           <li class="day-name">Fri</li>
           <li class="day-name">Sat</li>
         </ol>
-        <ol class="calendar-date grid grid-cols-7">
-          <li class="first-day">1</li>
+        <ol class="calendar-date grid grid-cols-7" id="caldate">
+          <li>1</li>
           <li>2</li>
           <li>3</li>
           <li>4</li>
@@ -43,7 +69,7 @@
           <li>8</li>
           <li>9</li>
           <li>10</li>
-          <li>11</li>
+          <li class="tenth-day bg-cyan-400 text-white">11</li>
           <li>12</li>
           <li>13</li>
           <li>14</li>
@@ -64,226 +90,21 @@
           <li>29</li>
           <li>30</li>
         </ol>
-      </div>
-      <div class="calendar-wrapper max-w-[400px]">
-        <h2 class="text-2xl text-center font-bold">July 2025</h2>
-        <ol class="calendar grid grid-cols-7 bg-gray-200">
-          <li class="day-name">Sum</li>
-          <li class="day-name">Mon</li>
-          <li class="day-name">Tus</li>
-          <li class="day-name">Wed</li>
-          <li class="day-name">Thu</li>
-          <li class="day-name">Fri</li>
-          <li class="day-name">Sat</li>
-        </ol>
-        <ol class="calendar-date grid grid-cols-7">
-          <li class="first-day">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li>20</li>
-          <li>21</li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-          <li>29</li>
-          <li>30</li>
-        </ol>
-      </div>
-      <div class="calendar-wrapper max-w-[400px]">
-        <h2 class="text-2xl text-center font-bold">Augest 2025</h2>
-        <ol class="calendar grid grid-cols-7 bg-gray-200">
-          <li class="day-name">Sum</li>
-          <li class="day-name">Mon</li>
-          <li class="day-name">Tus</li>
-          <li class="day-name">Wed</li>
-          <li class="day-name">Thu</li>
-          <li class="day-name">Fri</li>
-          <li class="day-name">Sat</li>
-        </ol>
-        <ol class="calendar-date grid grid-cols-7">
-          <li class="first-day">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li>20</li>
-          <li>21</li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-          <li>29</li>
-          <li>30</li>
-        </ol>
-      </div>
-      <div class="calendar-wrapper max-w-[400px]">
-        <h2 class="text-2xl text-center font-bold">September 2025</h2>
-        <ol class="calendar grid grid-cols-7 bg-gray-200">
-          <li class="day-name">Sum</li>
-          <li class="day-name">Mon</li>
-          <li class="day-name">Tus</li>
-          <li class="day-name">Wed</li>
-          <li class="day-name">Thu</li>
-          <li class="day-name">Fri</li>
-          <li class="day-name">Sat</li>
-        </ol>
-        <ol class="calendar-date grid grid-cols-7">
-          <li class="first-day">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li>20</li>
-          <li>21</li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-          <li>29</li>
-          <li>30</li>
-        </ol>
-      </div>
-      <div class="calendar-wrapper max-w-[400px]">
-        <h2 class="text-2xl text-center font-bold">October 2025</h2>
-        <ol class="calendar grid grid-cols-7 bg-gray-200">
-          <li class="day-name">Sum</li>
-          <li class="day-name">Mon</li>
-          <li class="day-name">Tus</li>
-          <li class="day-name">Wed</li>
-          <li class="day-name">Thu</li>
-          <li class="day-name">Fri</li>
-          <li class="day-name">Sat</li>
-        </ol>
-        <ol class="calendar-date grid grid-cols-7">
-          <li class="first-day">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li>20</li>
-          <li>21</li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-          <li>29</li>
-          <li>30</li>
-        </ol>
-      </div>
-      <div class="calendar-wrapper max-w-[400px]">
-        <h2 class="text-2xl text-center font-bold">November 2025</h2>
-        <ol class="calendar grid grid-cols-7 bg-gray-200">
-          <li class="day-name">Sum</li>
-          <li class="day-name">Mon</li>
-          <li class="day-name">Tus</li>
-          <li class="day-name">Wed</li>
-          <li class="day-name">Thu</li>
-          <li class="day-name">Fri</li>
-          <li class="day-name">Sat</li>
-        </ol>
-        <ol class="calendar-date grid grid-cols-7">
-          <li class="first-day">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li>20</li>
-          <li>21</li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-          <li>29</li>
-          <li>30</li>
-        </ol>
+        <div class="date-time max-w-[500px]">
+          <div
+            id="digital-clock"
+            class="text-6xl text-center text-black bg-amber-400 rounded-xl flex justify-center items-center gap-3"
+          >
+            <div class="text-xl">
+              <h3 class="font-semibold">Date</h3>
+              <span id="date" class="text-xl"></span>
+            </div>
+            <div class="text-xl">
+              <h3 class="font-semibold">Time</h3>
+              <span id="time" class="text-2xl"></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
